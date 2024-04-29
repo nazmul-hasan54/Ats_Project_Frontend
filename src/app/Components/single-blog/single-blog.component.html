@@ -1,0 +1,138 @@
+<section id="single-blog">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <!-- <img src="../../../assets/image/Blog.jpg" class="card-img-top" alt="blog"> -->
+                    <img [src]="blogDetails.blogImage" class="card-img-top" alt="blog">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">{{blogDetails.blogTitle}}</h5>
+                        <p class="card-text pb-2">
+                            {{blogDetails.blogDescription}}
+                        </p>
+                        <br><span>Published Date : {{blogDetails.createdDate | date: 'dd-MM-yyyy'}}</span>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <span>Tags : {{blogDetails.blogTags}} </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <div class="p-2 bd-highlight" id="flex2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Categories</h5>
+                            </div>
+                            <div class="card-body"></div>
+                        </div>
+                    </div>
+                    <div class="p-2 bd-highlight" id="flex3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Tags</h5>
+                            </div>
+                            <div class="card-body"></div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col">
+                    <a routerLink="/blogs" routerLinkActive="active">Back to page</a>
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit Blog</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Write you own word</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-form-label ">Title</label>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="title" id="title">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-form-label ">Description</label>
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" id="description" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-form-label ">Category</label>
+                                    <div class="col-md-12">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Select</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-form-label ">Tags</label>
+                                    <div class="col-md-12">
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" name="title" id="title">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-form-label ">Publish Date</label>
+                                    <div class="col-md-12">
+                                        <div class="col-md-12">
+                                            <input type="date" class="form-control" name="date" id="date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-form-label ">Upload</label>
+                                    <div class="col-md-12">
+                                        <div class="col-md-12">
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-2" id="multi-reference">
+                <div class="col-md-6" *ngFor="let blog of bloglist">
+                    <div class="d-flex flex-column bd-highlight mb-3">
+                        <div class="p-2 bd-highlight"><a (click)="openPage(blog.blogId)">{{blog.blogTitle}}</a></div>
+                        
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

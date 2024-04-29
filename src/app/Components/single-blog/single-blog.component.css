@@ -1,0 +1,13 @@
+#single-blog h5{
+    font-weight: bold;
+}
+#single-blog #flex1{
+    height: 35vh;
+}
+
+#single-blog #flex2{
+    height: 35vh;
+}
+#single-blog #multi-reference a{
+    cursor: pointer;
+}
