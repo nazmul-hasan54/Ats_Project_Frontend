@@ -11,3 +11,16 @@
 #single-blog #multi-reference a{
     cursor: pointer;
 }
+#single-blog #post{
+    background-color: #2A0001;
+    border: none;
+    margin-left: 20px;
+    color: rgb(216, 216, 216);
+    padding: 7px 15px;
+    border-radius: 4px;
+}
+#single-blog #post:hover{
+    border-color: #2A0001;
+    background-color: rgb(216, 216, 216);
+    color: #2A0001;
+}

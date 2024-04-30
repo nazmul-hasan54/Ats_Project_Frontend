@@ -9,3 +9,12 @@
     color: rgb(216, 216, 216);
     font-weight: 600;
 }
+
+#login{
+    background-color: white;
+    border-radius: 2px;
+    margin: 0 15px;
+    padding: 7px 15px;
+    color: #2A0001;
+}
+

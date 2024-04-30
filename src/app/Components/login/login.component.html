@@ -1,0 +1,45 @@
+
+<section class="pt-5" id="log-info">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <form [formGroup]="logInForm" (ngSubmit)="login()">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Login Here</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="col-form-label ">User Name</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" formControlName="userName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2 pb-2">
+                            <div class="col-md-12">
+                                <label class="col-form-label ">Password</label>
+                                <div class="col-md-12">
+                                <input type="password" class="form-control" formControlName="password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a routerLink="/register">Sign Up</a>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </form>  
+          </div>
+        </div>
+      </div>
+</section>
+<!-- <app-footer></app-footer> -->
